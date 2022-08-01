@@ -1,7 +1,7 @@
-import 'package:advanced_app/presentation/color_manager.dart';
-import 'package:advanced_app/presentation/font_manager.dart';
-import 'package:advanced_app/presentation/styles_manager.dart';
-import 'package:advanced_app/presentation/values_manager.dart';
+import 'package:advanced_app/presentation/resources/color_manager.dart';
+import 'package:advanced_app/presentation/resources/font_manager.dart';
+import 'package:advanced_app/presentation/resources/styles_manager.dart';
+import 'package:advanced_app/presentation/resources/values_manager.dart';
 import 'package:flutter/material.dart';
 
 ThemeData getAppTheme() {
@@ -79,6 +79,72 @@ ThemeData getAppTheme() {
       labelLarge: getSemiBoldStyle(
         color: ColorManager.primary,
         fontSize: FontSizeManager.s18,
+      ),
+    ),
+    // input decoration theme (text form field)
+    inputDecorationTheme: InputDecorationTheme(
+      //content padding
+      contentPadding: EdgeInsets.all(
+        AppSize.s8,
+      ),
+      // hint style
+      hintStyle: getRegularStyle(
+        color: ColorManager.grey1,
+      ),
+      // label style
+      labelStyle: getMediumStyle(
+        color: ColorManager.grey1,
+      ),
+      //enable style
+      enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(
+          color: ColorManager.grey1,
+          width: AppSize.s1,
+        ),
+        borderRadius: const BorderRadius.all(
+          Radius.circular(
+            AppSize.s8,
+          ),
+        ),
+      ),
+      // focus style
+      focusColor: ColorManager.primary,
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(
+          color: ColorManager.primary,
+          width: AppSize.s1,
+        ),
+        borderRadius: const BorderRadius.all(
+          Radius.circular(
+            AppSize.s8,
+          ),
+        ),
+      ),
+      //error style
+      errorStyle: getRegularStyle(
+        color: ColorManager.error,
+      ),
+      focusedErrorBorder: OutlineInputBorder(
+        borderSide: BorderSide(
+          color: ColorManager.primary,
+          width: AppSize.s1,
+        ),
+        borderRadius: const BorderRadius.all(
+          Radius.circular(
+            AppSize.s8,
+          ),
+        ),
+      ),
+      errorBorder: OutlineInputBorder(
+        borderSide: BorderSide(
+          color: ColorManager.error,
+          width: AppSize.s1,
+        ),
+        borderRadius: const BorderRadius.all(
+          Radius.circular(
+            AppSize.s8,
+          ),
+        ),
       ),
     ),
   );
