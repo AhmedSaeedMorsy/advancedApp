@@ -51,5 +51,35 @@ ThemeData getAppTheme() {
         ),
       ),
     ),
+    //text theme
+    textTheme: TextTheme(
+      headline1: getSemiBoldStyle(
+        color: ColorManager.grey1,
+        fontSize: FontSizeManager.s16,
+      ),
+      bodyMedium: getRegularStyle(
+        color: ColorManager.grey2,
+      ),
+      button: getMediumStyle(
+        color: ColorManager.white,
+        fontSize: FontSizeManager.s16,
+      ),
+      bodySmall: getRegularStyle(
+        color: ColorManager.primary,
+        fontSize: FontSizeManager.s12,
+      ),
+      bodyText1: getRegularStyle(
+        color: ColorManager.darkGrey,
+        fontSize: FontSizeManager.s12,
+      ),
+      labelMedium: getBoldStyle(
+        color: ColorManager.primary,
+        fontSize: FontSizeManager.s12,
+      ),
+      labelLarge: getSemiBoldStyle(
+        color: ColorManager.primary,
+        fontSize: FontSizeManager.s18,
+      ),
+    ),
   );
 }
