@@ -2,7 +2,7 @@ import 'package:advanced_app/presentation/details_screen/details_screen.dart';
 import 'package:advanced_app/presentation/forget_password_screen/forget_password_screen.dart';
 import 'package:advanced_app/presentation/home_screen/home_screen.dart';
 import 'package:advanced_app/presentation/login_screen/login_screen.dart';
-import 'package:advanced_app/presentation/onboarding_screen/onboarding_screen.dart';
+import 'package:advanced_app/presentation/onboarding_screen/view/onboarding_screen.dart';
 import 'package:advanced_app/presentation/register_screen/register_screen.dart';
 import 'package:advanced_app/presentation/resources/strings_manager.dart';
 import 'package:advanced_app/presentation/splash_screen/splash_screen.dart';
@@ -56,15 +56,16 @@ class RouteGenerator {
 
   static Route<dynamic> unDefiendRoute() {
     return MaterialPageRoute(
-        builder: (_) => Scaffold(
-              appBar: AppBar(
-                title: Text(AppStrings.notFound),
-              ),
-              body: Center(
-                child: Text(
-                  AppStrings.notFound,
-                ),
-              ),
-            ));
+      builder: (_) => Scaffold(
+        appBar: AppBar(
+          title: Text(AppStrings.notFound),
+        ),
+        body: Center(
+          child: Text(
+            AppStrings.notFound,
+          ),
+        ),
+      ),
+    );
   }
 }

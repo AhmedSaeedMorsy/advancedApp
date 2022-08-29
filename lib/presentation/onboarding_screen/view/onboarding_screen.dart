@@ -8,6 +8,11 @@ class OnBoardingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorManager.blueGray,
+      body: const Center(
+        child: Text(
+          "on Boarding  Screen",
+        ),
+      ),
     );
   }
 }
