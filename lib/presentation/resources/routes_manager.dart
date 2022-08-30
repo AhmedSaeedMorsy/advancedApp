@@ -27,7 +27,7 @@ class RouteGenerator {
         );
       case Routes.onBoardingRoute:
         return MaterialPageRoute(
-          builder: (_) => const OnBoardingScreen(),
+          builder: (_) => OnBoardingScreen(),
         );
       case Routes.loginRoute:
         return MaterialPageRoute(
